@@ -1,3 +1,4 @@
+//Implementing a restful controller
 package com.example.demo.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,19 +25,19 @@ public class PersonRestController {
 
 	@RequestMapping(value = "/create/jdbc", method = RequestMethod.GET)
 	public String oihsgfdjoisgfdjoi() {
-		persondbcService.addAPerson("hatim", "lechgar", 33);
+		persondbcService.addAPerson("name", "pseudo", 33);
 		return "Hatim Created with jdbc template";
 	}
 
 	@RequestMapping(value = "/create/em/verbose", method = RequestMethod.GET)
 	public String createPerson3() throws Exception {
-		personEntityFromFactoryService.addAPersonVerbose("hatim", "lechgar", 33);
+		personEntityFromFactoryService.addAPersonVerbose("name", "pseudo", 33);
 		return "Hatim Created with EntityManager verbose";
 	}
 
 	@RequestMapping(value = "/create/em", method = RequestMethod.GET)
 	public String createPerson2() {
-		personEntityService.addAPerson("hatim", "lechgar", 33);
+		personEntityService.addAPerson("name", "pseudo", 33);
 		return "Hatim Created with EntityManager";
 	}
 
